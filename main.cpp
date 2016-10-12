@@ -56,6 +56,8 @@ int main(int argc, char **argv)
 
 			}
 		}
+	} else {
+		printf("USAGE: rot13.exe [INPUT_FILE] [OUTPUT_FILE]")
 	}
 
 	return 0;
