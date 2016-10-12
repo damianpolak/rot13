@@ -1,4 +1,4 @@
-/* Mezc4L @ 2013
+/* Damian Polak @ 2013
  * Usage: rot13.exe INPUT_FILE OUTPUT_FILE
  */
 
@@ -57,9 +57,8 @@ int main(int argc, char **argv)
 			}
 		}
 	} else {
-		printf("USAGE: rot13.exe [INPUT_FILE] [OUTPUT_FILE]")
+		printf("\r\nUSAGE: rot13.exe [INPUT_FILE] [OUTPUT_FILE]\r\n");
 	}
-
 	return 0;
 }
 
@@ -78,7 +77,6 @@ char *RotEncode(char *PlainText)
 
 	for(int i = 0; i <= len - 1; i++)
 	{
-		
 		if(((int)PlainText[i] >= 65) && ((int)PlainText[i] <= 90))
 		{
 			if(((int)PlainText[i] + move) <= 90)
@@ -89,7 +87,6 @@ char *RotEncode(char *PlainText)
 			{
 				rot13[i] = (char)(65 + (move - (90 - (int)PlainText[i]) - 1));
 			}
-
 		} 
 		
 		else if(((int)PlainText[i] >= 97) && ((int)PlainText[i] <= 122))
